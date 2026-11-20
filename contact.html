@@ -23,7 +23,19 @@ body {
     background: #f5f7fb;
     color: #172033;
 }
-
+ /* Navbar */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #fff;
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #1e3a8a; }
+    .logo span { color: #f59e0b; }
+    .nav ul { display: flex; gap: 28px; list-style: none; }
+    .nav a { text-decoration: none; color: #374151; font-weight: 500; }
+    .nav a:hover { color: #1e3a8a; }
 .contact-section {
     min-height: 100vh;
     display: flex;
@@ -266,6 +278,15 @@ body {
     </style>
 </head>
 <body>
+
+    <nav class="nav">
+    <div class="logo">Bright<span>Future</span></div>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/course.html">Courses</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
     <section class="contact-section">
 
