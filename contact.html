@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.07);
+}
+
+/* Left Section */
+
+.contact-info {
+    background: #172554;
+    color: #ffffff;
+    padding: 65px 50px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #93c5fd;
+    margin-bottom: 25px;
+}
+
+.contact-info h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-info h1 span {
+    color: #60a5fa;
+}
+
+.description {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 45px;
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.info-item h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.info-item p {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.social-links {
+    display: flex;
+    gap: 22px;
+    margin-top: 55px;
+}
+
+.social-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #60a5fa;
+}
+
+/* Right Section */
+
+.contact-form {
+    padding: 65px 50px;
+}
+
+.contact-form h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.contact-form > p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 35px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3b82f6;
+    background: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #1d4ed8;
+}
+
+.contact-form button span {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .contact-container {
+        max-width: 650px;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 45px 35px;
+    }
+
+    .contact-info h1 {
+        font-size: 36px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .contact-section {
+        padding: 25px 15px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 35px 22px;
+    }
+
+    .contact-info h1 {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form h2 {
+        font-size: 23px;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- Left Content -->
+            <div class="contact-info">
+                <span class="tag">GET IN TOUCH</span>
+
+                <h1>Let's start a <span>conversation.</span></h1>
+
+                <p class="description">
+                    Have a project in mind or just want to say hello?
+                    We'd love to hear from you. Send us a message!
+                </p>
+
+                <div class="info-items">
+
+                    <div class="info-item">
+                        <div class="icon">✉</div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>hello@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">☎</div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon">⌖</div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>Kerala, India</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+
+
+            <!-- Right Contact Form -->
+            <div class="contact-form">
+
+                <h2>Send us a message</h2>
+                <p>Fill out the form and we'll get back to you.</p>
+
+                <form action="#" method="POST">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name"
+                                placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email"
+                                placeholder="john@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject"
+                            placeholder="How can we help?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="5"
+                            placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit">
+                        Send Message <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
