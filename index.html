@@ -1,146 +1,378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bright Future Institute</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Future Institute</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="logo">Bright<span>Future</span></div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="menu-toggle-label">Menu</span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-    body {
-      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-      color: #1f2937;
-    }
-
-    /* Navbar */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      background: #fff;
-    }
-    .logo { font-size: 1.4rem; font-weight: 800; color: #1e3a8a; }
-    .logo span { color: #f59e0b; }
-    .nav ul { display: flex; gap: 28px; list-style: none; }
-    .nav a { text-decoration: none; color: #374151; font-weight: 500; }
-    .nav a:hover { color: #1e3a8a; }
-
-    /* Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
-      gap: 48px;
-      padding: 80px 8%;
-      background: linear-gradient(135deg, #eff6ff 0%, #fef3c7 100%);
-      min-height: 80vh;
-    }
-    .tag {
-      display: inline-block;
-      background: #1e3a8a;
-      color: #fff;
-      font-size: 0.8rem;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
-      line-height: 1.1;
-      color: #111827;
-      margin-bottom: 20px;
-    }
-    .hero h1 em { font-style: normal; color: #1e3a8a; }
-    .hero p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #4b5563;
-      max-width: 520px;
-      margin-bottom: 32px;
-    }
-    .btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn {
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: #1e3a8a; color: #fff; box-shadow: 0 8px 20px rgba(30,58,138,.25); }
-    .btn-outline { border: 2px solid #1e3a8a; color: #1e3a8a; }
-
-    .stats { display: flex; gap: 36px; margin-top: 44px; }
-    .stats strong { display: block; font-size: 1.7rem; color: #1e3a8a; }
-    .stats span { font-size: 0.9rem; color: #6b7280; }
-
-    /* Right side visual (swap for a real photo) */
-    .visual {
-      height: 440px;
-      border-radius: 24px;
-      background: linear-gradient(160deg, #1e3a8a, #3b82f6);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 24px 50px rgba(30,58,138,.3);
-    }
-    .visual::before, .visual::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-    }
-    .visual::before { width: 260px; height: 260px; background: #f59e0b; opacity: .9; top: -60px; right: -60px; }
-    .visual::after { width: 180px; height: 180px; background: #fff; opacity: .15; bottom: -40px; left: -40px; }
-    .visual .label {
-      position: absolute;
-      bottom: 28px;
-      left: 28px;
-      right: 28px;
-      background: rgba(255,255,255,.95);
-      padding: 16px 20px;
-      border-radius: 14px;
-      font-weight: 600;
-      color: #1e3a8a;
-    }
-
-    @media (max-width: 860px) {
-      .hero { grid-template-columns: 1fr; padding: 56px 6%; }
-      .visual { height: 280px; }
-      .nav ul { display: none; }
-    }
-  </style>
-</head>
-<body>
-
-  <nav class="nav">
-    <div class="logo">Bright<span>Future</span></div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="course.html">Courses</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <div>
-      <span class="tag">Admissions open 2027</span>
-      <h1>Learn today. <em>Lead</em> tomorrow.</h1>
-      <p>Hands-on programs, mentors who actually care, and a campus built around your goals. Start something you'll be proud of.</p>
-      <div class="btns">
-        <a href="#" class="btn btn-primary">Apply Now</a>
-        <a href="#" class="btn btn-outline">Explore Courses</a>
+    <section class="hero">
+      <div>
+        <span class="tag">Admissions open 2027</span>
+        <h1>Learn today. <em>Lead</em> tomorrow.</h1>
+        <p>
+          Hands-on programs, mentors who actually care, and a campus built
+          around your goals. Start something you'll be proud of.
+        </p>
+        <div class="btns">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-open-application
+          >
+            Apply Now
+          </button>
+          <a href="course.html" class="btn btn-outline">Explore Courses</a>
+        </div>
+        <div class="stats">
+          <div>
+            <strong data-count-target="5000" data-count-suffix="+">5,000+</strong>
+            <span>Students</span>
+          </div>
+          <div>
+            <strong data-count-target="40" data-count-suffix="+">40+</strong>
+            <span>Programs</span>
+          </div>
+          <div>
+            <strong data-count-target="95" data-count-suffix="%">95%</strong>
+            <span>Placement</span>
+          </div>
+          <div>
+            <strong data-count-target="10" data-count-suffix="+">10+</strong>
+            <span>Years of Excellence</span>
+          </div>
+        </div>
       </div>
-      <div class="stats">
-        <div><strong>5,000+</strong><span>Students</span></div>
-        <div><strong>40+</strong><span>Programs</span></div>
-        <div><strong>95%</strong><span>Placement</span></div>
+
+      <div class="visual">
+        <div class="label">Next batch starts in January</div>
       </div>
-    </div>
+    </section>
 
-    <div class="visual">
-      <div class="label">Next batch starts in January</div>
-    </div>
-  </section>
+    <main>
+      <section class="section" aria-labelledby="why-title">
+        <div class="section-head">
+          <span class="eyebrow">Why Bright Future</span>
+          <h2 id="why-title">Everything you need to grow</h2>
+          <p>
+            We combine practical learning with personal guidance, so you leave
+            with skills employers want and the confidence to use them.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">◎</div>
+            <h3>Industry mentors</h3>
+            <p>Learn from working professionals who review your projects and share real-world insight.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">⚒</div>
+            <h3>Project-based learning</h3>
+            <p>Build a portfolio as you study, with hands-on assignments in every module.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">↗</div>
+            <h3>Career support</h3>
+            <p>Resume reviews, mock interviews, and placement drives with our hiring partners.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">◷</div>
+            <h3>Flexible schedules</h3>
+            <p>Weekday, weekend, and online batches so learning fits around your life.</p>
+          </article>
+        </div>
+      </section>
 
-</body>
+      <section class="section section-alt" aria-labelledby="programs-title">
+        <div class="section-head section-head-row">
+          <div>
+            <span class="eyebrow">Featured programs</span>
+            <h2 id="programs-title">Start with our most popular courses</h2>
+          </div>
+          <a href="course.html" class="text-link">View all courses →</a>
+        </div>
+        <div class="program-grid">
+          <article class="program">
+            <div class="program-banner banner-blue">
+              <span>Development</span>
+            </div>
+            <div class="program-body">
+              <h3>Complete Web Development Bootcamp</h3>
+              <p>HTML, CSS, JavaScript, and modern frameworks, from first page to deployed app.</p>
+              <ul class="program-meta">
+                <li>12 weeks</li>
+                <li>Beginner</li>
+              </ul>
+              <a href="course.html" class="text-link">Learn more →</a>
+            </div>
+          </article>
+          <article class="program">
+            <div class="program-banner banner-amber">
+              <span>Design</span>
+            </div>
+            <div class="program-body">
+              <h3>UI/UX Design Masterclass</h3>
+              <p>Research, wireframing, and prototyping to design products people love to use.</p>
+              <ul class="program-meta">
+                <li>10 weeks</li>
+                <li>Intermediate</li>
+              </ul>
+              <a href="course.html" class="text-link">Learn more →</a>
+            </div>
+          </article>
+          <article class="program">
+            <div class="program-banner banner-indigo">
+              <span>AI &amp; Data</span>
+            </div>
+            <div class="program-body">
+              <h3>Generative AI &amp; Machine Learning</h3>
+              <p>Python, machine learning fundamentals, and building with modern AI tools.</p>
+              <ul class="program-meta">
+                <li>16 weeks</li>
+                <li>Intermediate</li>
+              </ul>
+              <a href="course.html" class="text-link">Learn more →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="steps-title">
+        <div class="section-head">
+          <span class="eyebrow">Admissions</span>
+          <h2 id="steps-title">Getting started is simple</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-number">1</span>
+            <h3>Apply online</h3>
+            <p>Share your details in a two-minute form. No fees to apply.</p>
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            <h3>Talk to a counselor</h3>
+            <p>We'll help you pick the program that matches your goals.</p>
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            <h3>Start learning</h3>
+            <p>Join your batch, meet your mentor, and begin your first project.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section section-alt" aria-labelledby="stories-title">
+        <div class="section-head">
+          <span class="eyebrow">Student stories</span>
+          <h2 id="stories-title">What our learners say</h2>
+        </div>
+        <div class="testimonial-grid">
+          <figure class="testimonial">
+            <blockquote>
+              “The mentors pushed me to build real projects. I had a portfolio
+              and a job offer before I even finished the course.”
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">AS</span>
+              <span><strong>Ananya S.</strong> Web Development, 2025</span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>
+              “Weekend batches meant I could keep my job while switching
+              careers. The career team made the transition painless.”
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">RK</span>
+              <span><strong>Rahul K.</strong> UI/UX Design, 2025</span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>
+              “Clear lessons, supportive classmates, and feedback on every
+              assignment. Best decision I made for my career.”
+            </blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">MP</span>
+              <span><strong>Meera P.</strong> Machine Learning, 2024</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">Ready to start your journey?</h2>
+        <p>Seats for the January batch are limited. Apply today and our team will reach out within one working day.</p>
+        <div class="btns">
+          <button type="button" class="btn btn-light" data-open-application>
+            Apply Now
+          </button>
+          <a href="contact.html" class="btn btn-ghost">Talk to Us</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">Bright<span>Future</span></div>
+          <p>Practical, mentor-led programs that help you learn today and lead tomorrow.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>hello@example.com</li>
+            <li>+91 98765 43210</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">
+        &copy; <span data-year>2026</span> Bright Future Institute. All rights reserved.
+      </p>
+    </footer>
+
+    <dialog class="application-dialog" aria-labelledby="application-title">
+      <button
+        class="dialog-close"
+        type="button"
+        aria-label="Close application form"
+      >
+        &times;
+      </button>
+      <h2 id="application-title">Start your application</h2>
+      <p>Tell us how to reach you and our admissions team can help you choose a program.</p>
+      <form class="application-form">
+        <label for="applicant-name">Your name</label>
+        <input
+          id="applicant-name"
+          name="name"
+          autocomplete="name"
+          required
+        />
+        <label for="applicant-email">Email address</label>
+        <input
+          id="applicant-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        />
+        <button class="btn btn-primary" type="submit">Continue</button>
+        <p class="form-message" role="status" hidden></p>
+      </form>
+    </dialog>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navigation = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navigation.classList.remove("is-open");
+        }
+      });
+
+      const applicationDialog = document.querySelector(".application-dialog");
+      const applicationForm = document.querySelector(".application-form");
+      const formMessage = document.querySelector(".form-message");
+
+      document.querySelectorAll("[data-open-application]").forEach((button) => {
+        button.addEventListener("click", () => {
+          applicationForm.reset();
+          formMessage.hidden = true;
+          applicationDialog.showModal();
+        });
+      });
+
+      document.querySelector(".dialog-close").addEventListener("click", () => {
+        applicationDialog.close();
+      });
+
+      applicationDialog.addEventListener("click", (event) => {
+        if (event.target === applicationDialog) {
+          applicationDialog.close();
+        }
+      });
+
+      applicationForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = new FormData(applicationForm).get("name").trim();
+        formMessage.textContent = `Thanks, ${name}! This demo doesn't send your application yet.`;
+        formMessage.hidden = false;
+      });
+
+      document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+      const counters = document.querySelectorAll("[data-count-target]");
+      const showCounter = (counter) => {
+        const target = Number(counter.dataset.countTarget);
+        const suffix = counter.dataset.countSuffix;
+        const duration = 900;
+        const start = performance.now();
+
+        const updateCounter = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const value = Math.round(target * progress);
+          counter.textContent = `${new Intl.NumberFormat("en-US").format(value)}${suffix}`;
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          }
+        };
+
+        requestAnimationFrame(updateCounter);
+      };
+
+      if (
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        !("IntersectionObserver" in window)
+      ) {
+        counters.forEach((counter) => {
+          counter.textContent = `${new Intl.NumberFormat("en-US").format(Number(counter.dataset.countTarget))}${counter.dataset.countSuffix}`;
+        });
+      } else {
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              showCounter(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+        counters.forEach((counter) => statsObserver.observe(counter));
+      }
+    </script>
+  </body>
 </html>
